@@ -152,6 +152,11 @@ public class HomeController {
 			modelAndView.setViewName("redirect:/home");
 			return modelAndView;
 		}
+<<<<<<< HEAD
+=======
+//		System.out.println("dummy: " + dummy);
+//		System.out.println(email_id + "/////" + password);
+>>>>>>> 6dd2dfb442b17f58a44eff300bf3a07208624279
 		try {
 			int id = Integer.parseInt(email_id);
 			user = service.findUserById(id, password);

@@ -1,6 +1,10 @@
 package com.tcs.friendlier.pojo;
 
 import java.util.Date;
+<<<<<<< HEAD
+import java.util.Set;
+=======
+>>>>>>> 6dd2dfb442b17f58a44eff300bf3a07208624279
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
