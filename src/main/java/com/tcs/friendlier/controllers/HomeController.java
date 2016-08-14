@@ -105,15 +105,12 @@ public class HomeController {
 			modelAndView.setViewName("redirect:/home");
 			return modelAndView;
 		}
-		System.out.println("dummy: " + dummy);
-		System.out.println(email_id + "/////" + password);
 		try {
 			int id = Integer.parseInt(email_id);
 			user = service.findUserById(id, password);
 		} catch (NumberFormatException numberFormatException) {
 			user = service.findUserByEmail(email_id, password);
 		}
-		System.out.println("user: " + user);
 		if (user == null) {
 			modelAndView.addObject("msg", "Invalid Credentials!");
 			modelAndView.setViewName("loginRegister");

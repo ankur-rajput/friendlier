@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Hello Facebook</title>
+</head>
+<body>
+	<h3>
+		Hello, <span th:text="${facebookProfile.name}">Some User</span>!
+	</h3>
+
+	<h4>Here is your feed:</h4>
+
+	<div th:each="post:${feed}">
+		<b th:text="${post.from.name}">from name</b> having ID <b
+			th:text="${post.from.id}">from id</b> wrote:
+		<p th:text="${post.message}">message text</p>
+		<img th:if="${post.picture}" th:src="${post.picture}" />
+		on (created time): <p th:text="${post.createdTime}">when</p>
+		on (updated time): <p th:text="${post.updatedTime}">when</p>
+		link: <p th:text="${post.link}">link</p>
+		<hr />
+	</div>
+</body>
+</html>
